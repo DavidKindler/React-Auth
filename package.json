@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\""
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.0"
-  }
+    "concurrently": "^4.1.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
